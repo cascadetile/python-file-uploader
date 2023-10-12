@@ -1,4 +1,4 @@
-I choosed FastAPI because all of its endpoints are async which is good for simultaneous uplaod from miltiple clients.
+I choosed FastAPI because all of its endpoints are async which is good for simultaneous upload from miltiple clients.
 
 Then I've read this answer https://stackoverflow.com/a/73443824 and found out that standard FileUpload of FastAPI is saving files to disk if it's bigger than 1MB. Which is not suitable for my task because it needs to upload >1.5GB files while running on 512MB disk space machine. That's why I decided to use request.stream(). It gives you an ability to read incoming requests without waiting until it's fully received.
 
