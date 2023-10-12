@@ -7,7 +7,7 @@ Create a bucket called "my-bucket" or you can name it as you wish, but in that c
 Create new Access Key, copy these credentials and paste in main.py Minio Client object
 Now install required dependencies: FastAPI and uvicorn and use uvicorn main:app --reload to start the app in dev mode
 
-Files are uploaded to Minio as separate 5MB files and then combined into one on Minio's side. After that these separate files are cleared. put_object is supposed to do last 2 steps itself but for some reason it just records only latest part of a file. So that's why it works this way
+Files are uploaded to Minio as separate 5MB files and then combined into one on Minio's side. After that these separate files are cleared. put_object is supposed to do last 2 steps itself but for some reason it just records only latest part of a file. So that's why I did it this way
 
 Also no validation because I'm new in Python and don't have much time for this task
 
