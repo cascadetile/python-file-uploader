@@ -23,6 +23,7 @@ services:
     environment:
       - MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE
       - MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      - BUCKET_NAME=my-bucket
     depends_on:
       - minio
     networks:
