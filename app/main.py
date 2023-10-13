@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from minio import Minio
@@ -21,9 +22,9 @@ app.add_middleware(
 )
 
 minio_client = Minio(
-    "127.0.0.1:9000",
-    access_key="YOUR_ACCESS_KEY",
-    secret_key="YOUR_SECRET_KEY",
+    "minio:9000",
+    access_key=os.environ['MINIO_ACCESS_KEY'],
+    secret_key=os.environ['MINIO_SECRET_KEY'],
     secure=False,
 )
 
