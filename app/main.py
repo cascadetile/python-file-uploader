@@ -29,7 +29,7 @@ minio_client = Minio(
 )
 
 batch_size = 5 * 1024 * 1024  # 5MB
-bucket_name = "my-bucket"
+bucket_name = os.environ['BUCKET_NAME']
 
 @app.post("/files/")
 async def create_file(request: Request):
