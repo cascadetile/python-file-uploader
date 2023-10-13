@@ -8,6 +8,9 @@ Create a bucket called "my-bucket" or you can name it as you wish, but in that c
 
 Files are uploaded to Minio as separate 5MB files and then combined into one on Minio's side. After that these separate files are cleared. put_object is supposed to do last 2 steps itself but for some reason it just records only latest part of a file. So that's why I did it this way
 
+Disk usage from Docker Desktop:
+![image](https://github.com/cascadetile/python-file-uploader/assets/112803211/f74849ac-09a7-4c6b-ae22-64e6e4a25184)
+
 Also no validation because I'm new in Python and don't have much time for this task
 
 Minio Python API (poorly documented IMO): https://min.io/docs/minio/linux/developers/python/API.html
